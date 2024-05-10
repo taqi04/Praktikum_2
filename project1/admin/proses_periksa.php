@@ -31,7 +31,7 @@ if ($_proses == 'tambah_periksa') {
 }else{
     $id_periksa = $_GET['id'];
     $sql = "DELETE FROM periksa WHERE id=?";
-    $stmt = $dbh->prepare($sql);
+    $stmt = $dbh->prepare($sql);    
     $stmt->execute([$id_periksa]);
 }
 header("Location: Periksa.php");
